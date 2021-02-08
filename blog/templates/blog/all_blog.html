@@ -1,8 +1,11 @@
 <h2>Dit wordt de Blog Page</h2>
 
-{% for blogs in blog %}
-<h2>{{ blogs.title }}</h2>
-<p>{{ blogs.description }}</p>
-<p>{{ blogs.date }}</p>
+
+
+{% for blog in blog %}
+
+<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+<p>{{ blog.description }}</p>
+<p>{{ blog.date }}</p>
 
 {% endfor %}
